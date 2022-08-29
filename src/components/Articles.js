@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import moment from 'moment';
 
 function Articles() {
   const [error, setErrors] = useState(null);
@@ -28,13 +29,19 @@ function Articles() {
     return <div>Loading...</div>;
   } else {
     return (
-      <ul>
-        {items.map(item => (
-          <li key={item.id}>
-            {item.title}
-          </li>
-        ))}
-      </ul>
+      <div className="posts">
+        <h2>Posts</h2>
+        <ul>
+          {items.map(item => (
+            <li key={item._id}>
+              <h3>{item.title}</h3>
+              <p>{decodeURI(item.content)}</p>
+              <p>{item.author.firstName + " " + item.author.lastName}</p>
+              <p>{moment(item.timestamp).format('MMMM Do YYYY')}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
     );
   }
 }

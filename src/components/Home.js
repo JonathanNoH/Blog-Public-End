@@ -3,8 +3,8 @@ import Articles from "./Articles";
 function Home() {
   return (
       <main>
-        <h2>Welcome to the homepage!</h2>
-        <p>You can do this, I believe in you.</p>
+        <h2>Welcome to the homepage of this blog</h2>
+        <p>This blog was made with react and express.</p>
         <Articles />
       </main>
   );
