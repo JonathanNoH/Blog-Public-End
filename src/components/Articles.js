@@ -34,40 +34,52 @@ function Articles() {
           <h2>Posts</h2>
           <ul className='article-list'>
             <li>
-              <h3>Article 2</h3>
-              <p className='post-content'>This is where all the content goes. Content content lorem ipsum.</p>
-              <p className='post-author'>Author Person</p>
-              <p className='post-date'>Posted on August 2</p>
+              <div className="li-flex-container">
+                <h3>Article 2</h3>
+                <p className='post-content'>This is where all the content goes. Content content lorem ipsum.</p>
+                <p className='post-author'>Author Person</p>
+                <p className='post-date'>Posted on August 2</p>
+              </div>
             </li>
             <li>
-              <h3>Article 1</h3>
-              <p className='post-content'>This is the content for the first article. Content content lorem ipsum.</p>
-              <p className='post-author'>Author Person</p>
-              <p className='post-date'>Posted on August 1</p>
+              <div className="li-flex-container">
+                <h3>Article 1</h3>
+                <p className='post-content'>This is the content for the first article. Content content lorem ipsum.</p>
+                <p className='post-author'>Author Person</p>
+                <p className='post-date'>Posted on August 1</p>
+              </div>
             </li>
             <li>
-              <h3>Article 2</h3>
-              <p className='post-content'>This is where all the content goes. Content content lorem ipsum.</p>
-              <p className='post-author'>Author Person</p>
-              <p className='post-date'>Posted on August 2</p>
+              <div className="li-flex-container">
+                <h3>Article 2</h3>
+                <p className='post-content'>This is where all the content goes. Content content lorem ipsum.</p>
+                <p className='post-author'>Author Person</p>
+                <p className='post-date'>Posted on August 2</p>
+              </div>
             </li>
             <li>
-              <h3>Article 1</h3>
-              <p className='post-content'>This is the content for the first article. Content content lorem ipsum.</p>
-              <p className='post-author'>Author Person</p>
-              <p className='post-date'>Posted on August 1</p>
+              <div className="li-flex-container">
+                <h3>Article 1</h3>
+                <p className='post-content'>This is the content for the first article. Content content lorem ipsum.</p>
+                <p className='post-author'>Author Person</p>
+                <p className='post-date'>Posted on August 1</p>
+              </div>
             </li>
             <li>
-              <h3>Article 2</h3>
-              <p className='post-content'>This is where all the content goes. Content content lorem ipsum.</p>
-              <p className='post-author'>Author Person</p>
-              <p className='post-date'>Posted on August 2</p>
+              <div className="li-flex-container">
+                <h3>Article 2</h3>
+                <p className='post-content'>This is where all the content goes. Content content lorem ipsum.</p>
+                <p className='post-author'>Author Person</p>
+                <p className='post-date'>Posted on August 2</p>
+              </div>
             </li>
             <li>
-              <h3>Article 1</h3>
-              <p className='post-content'>This is the content for the first article. Content content lorem ipsum.</p>
-              <p className='post-author'>Author Person</p>
-              <p className='post-date'>Posted on August 1</p>
+              <div className="li-flex-container">
+                <h3>Article 1</h3>
+                <p className='post-content'>This is the content for the first article. Content content lorem ipsum.</p>
+                <p className='post-author'>Author Person</p>
+                <p className='post-date'>Posted on August 1</p>
+              </div>
             </li>
           </ul>
         </section>
