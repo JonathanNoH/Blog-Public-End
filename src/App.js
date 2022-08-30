@@ -1,6 +1,6 @@
-import './App.css';
+import './styles/App.css';
 import Header from './components/Header';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Archive from './components/Archive';
 

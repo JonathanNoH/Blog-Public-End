@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
+import '../styles/Header.css';
 
 function Header() {
   return (
-    <div>
-      <h1>Blog</h1>
+    <header>
+      <h1>The Blog</h1>
       <nav role={"navigation"}>
         <Link to="/">Home</Link>
         <Link to="/archive">Archive</Link>
       </nav>
-    </div>
+    </header>
   )
 } 
 

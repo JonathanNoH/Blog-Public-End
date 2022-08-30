@@ -1,0 +1,34 @@
+:root {
+  --background: #fffffe;
+  --headline: #181818;
+  --paragraph: #2e2e2e;
+  --button: #4fc4cf;
+  --button-text: #181818;
+
+  --black: #181818;
+  --off-white: #f2eef5;
+  --accent: #4fc4cf;
+  --secondary: #994ff3;
+  --tertiary: #fbdd74;
+}
+
+body {
+  background-color: var(--background);
+}
+
+p {
+  color: var(--paragraph);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--headline);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+button {
+  background-color: var(--button);
+  color: var(--button-text);
+}
