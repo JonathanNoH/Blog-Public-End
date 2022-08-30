@@ -1,0 +1,35 @@
+.posts {
+  padding: 2rem;
+}
+
+.posts h2 {
+  text-align: center;
+  padding: 1rem;
+}
+
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.article-list li {
+  background-color: var(--off-white);
+
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  transition-duration: 250ms;
+  transition-property: transform;
+}
+
+.article-list li:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.post-author, .post-date {
+  margin-left: auto;
+  font-size: 0.875rem;
+}

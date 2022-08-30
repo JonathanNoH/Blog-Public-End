@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import moment from 'moment';
+import '../styles/Articles.css';
 
 function Articles() {
   const [error, setErrors] = useState(null);
@@ -24,24 +25,70 @@ function Articles() {
   }, [])
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return (
+    <div>
+        <p>Error: {error.message}</p>
+        {/* TEMPORARY ARTICLES */}
+        <section className='posts'>
+          <h2>Posts</h2>
+          <ul className='article-list'>
+            <li>
+              <h3>Article 2</h3>
+              <p className='post-content'>This is where all the content goes. Content content lorem ipsum.</p>
+              <p className='post-author'>Author Person</p>
+              <p className='post-date'>Posted on August 2</p>
+            </li>
+            <li>
+              <h3>Article 1</h3>
+              <p className='post-content'>This is the content for the first article. Content content lorem ipsum.</p>
+              <p className='post-author'>Author Person</p>
+              <p className='post-date'>Posted on August 1</p>
+            </li>
+            <li>
+              <h3>Article 2</h3>
+              <p className='post-content'>This is where all the content goes. Content content lorem ipsum.</p>
+              <p className='post-author'>Author Person</p>
+              <p className='post-date'>Posted on August 2</p>
+            </li>
+            <li>
+              <h3>Article 1</h3>
+              <p className='post-content'>This is the content for the first article. Content content lorem ipsum.</p>
+              <p className='post-author'>Author Person</p>
+              <p className='post-date'>Posted on August 1</p>
+            </li>
+            <li>
+              <h3>Article 2</h3>
+              <p className='post-content'>This is where all the content goes. Content content lorem ipsum.</p>
+              <p className='post-author'>Author Person</p>
+              <p className='post-date'>Posted on August 2</p>
+            </li>
+            <li>
+              <h3>Article 1</h3>
+              <p className='post-content'>This is the content for the first article. Content content lorem ipsum.</p>
+              <p className='post-author'>Author Person</p>
+              <p className='post-date'>Posted on August 1</p>
+            </li>
+          </ul>
+        </section>
+      </div>
+      );
   } else if (!isLoaded) {
     return <div>Loading...</div>;
   } else {
     return (
-      <div className="posts">
+      <section className="posts">
         <h2>Posts</h2>
-        <ul>
+        <ul className='article-list'>
           {items.map(item => (
             <li key={item._id}>
-              <h3>{item.title}</h3>
-              <p>{decodeURI(item.content)}</p>
-              <p>{item.author.firstName + " " + item.author.lastName}</p>
-              <p>{moment(item.timestamp).format('MMMM Do YYYY')}</p>
+              <h3>{item.title.substr(0, 30) + "..."}</h3>
+              <p className='post-content'>{item.content.substr(0, 30) + "..."}</p>
+              <p className='post-author'>{item.author.firstName + " " + item.author.lastName}</p>
+              <p className='post-date'>{moment(item.timestamp).format('MMMM Do YYYY')}</p>
             </li>
           ))}
         </ul>
-      </div>
+      </section>
     );
   }
 }

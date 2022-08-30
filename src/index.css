@@ -38,6 +38,10 @@ ol, ul {
   list-style: none;
 }
 
+ol, ul, li {
+  padding-left: 0;
+}
+
 @font-face {
   font-family: 'Lobster';
   src: local('Lobster') url(./fonts/Lobster-Regular.ttf) format('ttf');
