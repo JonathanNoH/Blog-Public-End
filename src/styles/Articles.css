@@ -16,12 +16,14 @@
 .article-list li {
   background-color: var(--off-white);
 
+  transition-duration: 250ms;
+  transition-property: transform;
+}
+
+.li-flex-container {
   padding: 2rem;
   display: flex;
   flex-direction: column;
-
-  transition-duration: 250ms;
-  transition-property: transform;
 }
 
 .article-list li:hover {

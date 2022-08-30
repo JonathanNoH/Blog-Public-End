@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import moment from 'moment';
 import '../styles/Articles.css';
+import { Link } from 'react-router-dom';
 
 function Articles() {
   const [error, setErrors] = useState(null);
@@ -81,10 +82,14 @@ function Articles() {
         <ul className='article-list'>
           {items.map(item => (
             <li key={item._id}>
-              <h3>{item.title.substr(0, 30) + "..."}</h3>
-              <p className='post-content'>{item.content.substr(0, 30) + "..."}</p>
-              <p className='post-author'>{item.author.firstName + " " + item.author.lastName}</p>
-              <p className='post-date'>{moment(item.timestamp).format('MMMM Do YYYY')}</p>
+              <Link to={item._id}>
+                <div className="li-flex-container">
+                  <h3>{item.title.substr(0, 30) + "..."}</h3>
+                  <p className='post-content'>{item.content.substr(0, 30) + "..."}</p>
+                  <p className='post-author'>{item.author.firstName + " " + item.author.lastName}</p>
+                  <p className='post-date'>{moment(item.timestamp).format('MMMM Do YYYY')}</p>
+                </div>
+              </Link>
             </li>
           ))}
         </ul>
