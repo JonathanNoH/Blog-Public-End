@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Comments from "./Comments";
+import moment from "moment";
 
 function Article() {
   const [error, setErrors] = useState(null);
@@ -30,9 +32,15 @@ function Article() {
     return <div>Loading...</div>
   } else {
     return (
-      <div>
-        {items[0].title}
-      </div>
+      <main>
+        <section className="article">
+          <h2>{items[0].title}</h2>
+          <p>{items[0].author.firstName + " " + items[0].author.lastName}</p>
+          <p className="article-date">{moment(items[0].timestamp).format('MMMM Do YYYY')}</p>
+          <p>{items[0].content}</p>
+        </section>
+        <Comments />
+      </main>
     );
   }
 }
