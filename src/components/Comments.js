@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import moment from 'moment';
 import '../styles/Comments.css';
+import PostComment from './PostComment';
 
 function Comments() {
   const [error, setErrors] = useState(null);
@@ -34,6 +35,7 @@ function Comments() {
     return (
       <section className="comments">
         <h3>Comments</h3>
+        <PostComment />
         <ul className='comment-list'>
           {items.map(item => (
             <li key={item._id}>
