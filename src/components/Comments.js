@@ -10,6 +10,11 @@ function Comments() {
   const [items, setItems] = useState([]);
   let params = useParams(); // id and cid for post id and comment id
 
+  const [refresh, setRefresh] = useState(false);
+  const handleCommentsRefresh = () => {
+    setRefresh((value) => !value);
+  }
+
   //componentDidMount fetch Comments
   useEffect(() => {
     fetch(`http://localhost:3005/posts/published/${params.id}/comments`, {mode: 'cors'})
@@ -25,7 +30,7 @@ function Comments() {
           setErrors(error);
         }
       )
-  }, [params])
+  }, [params, refresh])
 
   if (error) {
     return <div>Error: {error.message}</div>
@@ -35,7 +40,7 @@ function Comments() {
     return (
       <section className="comments">
         <h3>Comments</h3>
-        <PostComment />
+        <PostComment refreshComments = {handleCommentsRefresh}/>
         <ul className='comment-list'>
           {items.map(item => (
             <li key={item._id}>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 
-function PostComment() {
+function PostComment(props) {
   let params = useParams();
   const [content, setContent] = useState("");
   const [author, setAuthor] = useState("");
@@ -32,6 +32,7 @@ function PostComment() {
         setAuthor("");
         setContent("");
         setMessage("Comment created!");
+        props.refreshComments();
       } else {
         setMessage("Something went wrong.");
       }
